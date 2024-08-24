@@ -21,7 +21,7 @@ pip install -m requirements.txt
 ```
 3. Run the following code script.
 ```
-uvicorn webserver:app --host 0.0.0.0 --port 8000
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 ## How to Deploy
@@ -31,13 +31,13 @@ Change config in .env
 ```
 cd your directory
 .\.venv\Scripts\activate
-uvicorn webserver:app --host 0.0.0.0 --port 8003
+uvicorn main:app --host 0.0.0.0 --port 8003
 ```
 
 ## Rest API
 
 ```bash 
-uvicorn webserver:app
+uvicorn main:app
 ```
 
 ```bash 
