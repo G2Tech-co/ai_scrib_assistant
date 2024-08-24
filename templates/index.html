@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        /* Styles for checkbox and label */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-container label {
+            margin: 0;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: #007bff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Here goes your data:</h3>
+    <form action="/sum" method="post">
+        <label for="file_name">File Name:</label>
+        <textarea name="file_name" id="file_name" cols="30" rows="5"></textarea>
+        <div class="checkbox-container">
+            <input type="checkbox" id="summarize" name="summarize">
+            <label for="summarize">Summarize</label>
+        </div>
+
+        <input type="submit" value="Get Answer">
+    </form>
+
+    <h2>Answer: <span id="answer">{{answer}}</span></h2>
+</body>
+
+</html>
